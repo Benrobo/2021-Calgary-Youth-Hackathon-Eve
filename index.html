@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eve</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="main-body">
+    <div class="main-container container-fluid">
+      <!-- header -->
+      <header class="header">
+        <!-- navbar -->
+        <div class="ovl">
+          <nav class="navbar"></nav>
+
+          <div class="header-cont">
+            <div class="text">
+              <h1 class="brand">Eve</h1>
+              <h1>Tools that would make you feel better</h1>
+              <br />
+              <h6>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+                veritatis provident ullam minus tenetur autem doloribus
+                voluptatibus eligendi. Nesciunt maiores, autem ducimus
+                repudiandae accusantium tempora odio a illo cum laudantium.
+              </h6>
+              <button class="btn startBtn">Get Started</button>
+            </div>
+            <div class="imgcont">
+              <img src="./img/brain.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- info section -->
+      <section class="section">
+        <div class="main">
+          <!-- boxes -->
+          <div class="boxes">
+            <div class="box info">
+              <div class="left">
+                <ion-icon name="sad-outline"></ion-icon>
+              </div>
+              <div class="right">
+                <h2 class="title">Eve</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quibusdam at, voluptate impedit ut iste libero.
+                </p>
+              </div>
+            </div>
+
+            <div class="box info-2">
+              <div class="left">
+                <ion-icon name="happy-outline"></ion-icon>
+              </div>
+              <div class="right">
+                <h2 class="title">Why Eve?</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Dicta, excepturi iure tenetur libero laboriosam enim.
+                  Quibusdam at, voluptate impedit ut iste libero.
+                </p>
+              </div>
+            </div>
+            <div class="box info">
+              <div class="left">
+                <ion-icon name="power-outline"></ion-icon>
+              </div>
+              <div class="right">
+                <h2 class="title">Blah Blah</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quibusdam at, voluptate impedit ut iste libero.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- features -->
+          <div class="features">
+            <div class="head">
+              <h1>Eve Features</h1>
+            </div>
+            <div class="body">
+              <div class="box">
+                <ion-icon name="musical-notes-outline"></ion-icon>
+                <div class="sub-title">Meditation</div>
+              </div>
+              <div class="box">
+                <ion-icon name="happy-outline"></ion-icon>
+                <div class="sub-title">Mood Tracker</div>
+              </div>
+              <div class="box">
+                <ion-icon name="bicycle-outline"></ion-icon>
+                <div class="sub-title">Exercises</div>
+              </div>
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="footer">
+            <p>created by 
+                <a href=""><span class="brand">@benrobo</span></a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- mental options -->
+      <div class="mental-ovl">
+          <div class="mental-option-cont">
+              <div class="head">
+                  <p class="title">What is your main focus?</p>
+                  <ion-icon
+                  class="close-icon"
+                  name="close-outline"></ion-icon>
+              </div>
+              <div class="mental-body">
+                <div class="box choice">
+                    <ion-icon name="headset-outline"></ion-icon>
+                    <p class="subtitle">Meditate</p>
+                </div>
+                <div class="box choice">
+                    <ion-icon name="sad-outline"></ion-icon>
+                    <p class="subtitle">Mood Tracker</p>
+                </div>
+                <div class="box choice">
+                    <ion-icon name="barbell-outline"></ion-icon>
+                    <p class="subtitle">Mental Workout</p>
+                </div>
+                <div class="box choice">
+                    <span class="jokes">😂</span>
+                    <p class="subtitle">Jokes</p>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- body -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="js/particles.js"></script>
+    <script>
+      particlesJS.load("main-body", "js/particles.json", function () {
+        console.log("callback - particles.js config loaded");
+      });
+    </script>
+  </body>
+</html>
