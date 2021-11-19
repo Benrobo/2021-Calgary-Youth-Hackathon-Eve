@@ -102,42 +102,51 @@
           </div>
           <!-- footer -->
           <div class="footer">
-            <p>created by 
-                <a href=""><span class="brand">@benrobo</span></a>
+            <p>
+              created by
+              <a href=""><span class="brand">@benrobo</span></a>
             </p>
           </div>
         </div>
       </section>
 
-
       <!-- mental options -->
       <div class="mental-ovl">
-          <div class="mental-option-cont">
-              <div class="head">
-                  <p class="title">What is your main focus?</p>
-                  <ion-icon
-                  class="close-icon"
-                  name="close-outline"></ion-icon>
-              </div>
-              <div class="mental-body">
-                <div class="box choice">
-                    <ion-icon name="headset-outline"></ion-icon>
-                    <p class="subtitle">Meditate</p>
-                </div>
-                <div class="box choice">
-                    <ion-icon name="sad-outline"></ion-icon>
-                    <p class="subtitle">Mood Tracker</p>
-                </div>
-                <div class="box choice">
-                    <ion-icon name="barbell-outline"></ion-icon>
-                    <p class="subtitle">Mental Workout</p>
-                </div>
-                <div class="box choice">
-                    <span class="jokes">😂</span>
-                    <p class="subtitle">Jokes</p>
-                </div>
-              </div>
+        <div class="mental-option-cont">
+          <div class="head">
+            <p class="title">What is your main focus?</p>
+            <ion-icon
+              class="close-icon close-metal-ovl"
+              name="close-outline"
+            ></ion-icon>
           </div>
+          <div class="mental-body">
+            <a href="meditate.html">
+              <div class="box choice">
+                <ion-icon name="headset-outline"></ion-icon>
+                <p class="subtitle">Meditate</p>
+              </div>
+            </a>
+            <a href="mood.html">
+              <div class="box choice">
+                <ion-icon name="sad-outline"></ion-icon>
+                <p class="subtitle">Mood Tracker</p>
+              </div>
+            </a>
+            <a href="workout.html">
+              <div class="box choice">
+                <ion-icon name="barbell-outline"></ion-icon>
+                <p class="subtitle">Mental Workout</p>
+              </div>
+            </a>
+            <a href="jokes.html">
+              <div class="box choice">
+                <span class="jokes">😂</span>
+                <p class="subtitle">Jokes</p>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -152,11 +161,15 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
+    <script src="./js/app.js"></script>
+
     <script src="js/particles.js"></script>
     <script>
       particlesJS.load("main-body", "js/particles.json", function () {
         console.log("callback - particles.js config loaded");
       });
+
+      GET_STARTED();
     </script>
   </body>
 </html>

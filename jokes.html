@@ -12,35 +12,50 @@
     <div class="main-container container-fluid">
       <!-- header -->
       <div class="jokes-header">
+        <ion-icon name="arrow-back-outline" class="page-back-btn page-joke-back"></ion-icon>
         <div class="body">
-            <h5>
-                <span class="brand">Laughter helps you stay mentally healthy.</span>
-                Laughter makes you feel good. And this positive feeling remains with
-                you even after the laughter subsides. Humor helps you keep a positive,
-                optimistic outlook through difficult situations, disappointments, and
-                loss.
-              </h5>
-              <br>
-              <p>Choose From Below</p>
-              <div class="boxes">
-                  <button class="btn jokes-btn">Funny Jokes</button>
-                  <button class="btn memes-btn">Funny Memes</button>
-              </div>
+          <h5>
+            <span class="brand">Laughter </span> helps you stay mentally healthy.
+            Laughter makes you feel good. And this positive feeling remains with
+            you even after the laughter subsides. Humor helps you keep a
+            positive, optimistic outlook through difficult situations,
+            disappointments, and loss.
+          </h5>
+          <br />
+          <p>Choose From Below</p>
+          <div class="boxes">
+            <button class="btn jokes-btn">Funny Jokes</button>
+            <button class="btn memes-btn">Funny Memes</button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- jokes container -->
     <div class="jokes-main-cont">
-        <div class="jokes-body">
-            <div class="jokes-screen">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, aperiam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, explicabo?
-            </div>
-            <br>
-            <button class="btn gen-btn">Next</button>
+      <div class="jokes-body">
+        <div class="head">
+          <ion-icon class="close-icon jokes-close-btn" name="close-outline"></ion-icon>
         </div>
+        <div class="jokes-screen">
+            Why did the scarecrow win an award? Because he was outstanding in his field.
+        </div>
+        <br />
+        <button class="btn gen-btn jokeGenBtn">Next Joke</button>
+      </div>
     </div>
 
+    <!-- Memes Genrator -->
+    <div class="memes-main-cont">
+      <div class="memes-body">
+        <div class="head">
+          <ion-icon class="close-icon memes-close-btn" name="close-outline"></ion-icon>
+        </div>
+        <div class="memes-screen"></div>
+        <br />
+        <button class="btn gen-btn memesGenBtn">Next Memes</button>
+      </div>
+    </div>
 
     <!-- body -->
 
@@ -52,5 +67,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script src="./js/app.js"></script>
+    <script>
+        JOKES_PAGE_INIT()
+    </script>
   </body>
 </html>
