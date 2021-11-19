@@ -586,6 +586,12 @@ body {
   }
 }
 
+.reset-meditation{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+}
+
 /* MOOD CONTAINER */
 
 .mood-main-container {

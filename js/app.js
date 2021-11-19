@@ -108,31 +108,35 @@ const JOKES_PAGE_INIT = () => {
 
 
 const MEDITATION = () => {
-    let animeImg = $(".medi-grow-img");
     let startBtn = $(".start-meditation-btn");
+    let resetBtn = $(".reset-meditation");
     let instruction = $(".instruction-txt");
     let isStarted = false;
-    let totaltime = 7500;
+    let totaltime = 4500;
     let breatheTime = (totaltime / 5) * 2;
+    let audio = new Audio()
+    audio.src = "../epic.mp3"
 
     startBtn.onclick = () => {
 
         isStarted = true;
-
-        instruction.innerHTML = ""
+        
+        instruction.innerHTML = "Hold On"
 
         let startInterval = setInterval(() => {
             startMeditation();
         }, totaltime);
-
-
-
     }
 
-
+    resetBtn.onclick = ()=>{
+        location.reload()
+    }
 
     function startMeditation() {
         setTimeout(() => {
+            audio.play()
+            startBtn.style.display = "none";
+
             instruction.innerHTML = `
             <p>Breathe In<p>`;
 
@@ -175,7 +179,7 @@ const MOOD = () => {
         }
         loading = true;
         musicBody.innerHTML = `
-        <p>Getting media based on your mood, this may take some time.</p>
+        <p>Getting media based on your mood, this may take some time.....</p>
          `
         let req = await fetch(`http://localhost:3000/music/search/`, {
             method: "POST",
