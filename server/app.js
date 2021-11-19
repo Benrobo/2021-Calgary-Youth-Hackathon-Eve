@@ -3,6 +3,9 @@ const memes = require("random-memes");
 const cors = require("cors")
 const bodyParser = require("body-parser")
 const fetch = require("node-fetch")
+const YoutubeMusicApi = require('youtube-music-api')
+
+const YT = new YoutubeMusicApi()
 
 const app = express()
 
@@ -30,6 +33,33 @@ app.get("/jokes/random", async (req, res) => {
     });
     let jokes = await request.json()
     res.json(jokes)
+})
+
+
+app.get("/music/search/:keyword", (req, res) => {
+    let { keyword } = req.params;
+
+    YT.initalize()
+        .then(async (info) => {
+            let songs = await YT.search(keyword, "song")
+
+            let songsData = {};
+            let songsWorld = []
+            songs.content.forEach(data => {
+                songsData["videoId"] = data.videoId,
+                    songsData["name"] = data.name,
+                    songsData["artist"] = data.artist.name,
+                    songsData["thumbnails"] = data.thumbnails[1].url
+
+                songsWorld.push(songsData);
+                return songsWorld
+            });
+
+
+
+            res.json({ songs: songsWorld })
+        })
+
 })
 
 app.listen(port, () => {

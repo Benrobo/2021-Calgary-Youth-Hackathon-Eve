@@ -17,10 +17,10 @@ const GET_STARTED = () => {
     let mentalOvl = $(".mental-ovl");
     let closeMentalOvl = $(".close-metal-ovl");
 
-    getStartedBtn.onclick = ()=>{
+    getStartedBtn.onclick = () => {
         mentalOvl.style.display = "flex"
     }
-    closeMentalOvl.onclick = ()=>{
+    closeMentalOvl.onclick = () => {
         mentalOvl.style.display = "none"
     }
 }
@@ -102,3 +102,47 @@ const JOKES_PAGE_INIT = () => {
         return data;
     }
 }
+
+
+
+
+
+const MEDITATION = () => {
+    let animeImg = $(".medi-grow-img");
+    let startBtn = $(".start-meditation-btn");
+    let instruction = $(".instruction-txt");
+    let isStarted = false;
+    let totaltime = 7500;
+    let breatheTime = (totaltime / 5) * 2;
+
+    startBtn.onclick = () => {
+
+        isStarted = true;
+
+        instruction.innerHTML = ""
+
+        let startInterval = setInterval(() => {
+            startMeditation();
+        }, totaltime);
+
+
+
+    }
+
+
+
+    function startMeditation() {
+        setTimeout(() => {
+            instruction.innerHTML = `
+            <p>Breathe In<p>`;
+
+            setTimeout(() => {
+                instruction.innerHTML = `
+                <p>Breathe Out<p>`;
+            }, breatheTime);
+        }, breatheTime)
+    }
+}
+
+
+
