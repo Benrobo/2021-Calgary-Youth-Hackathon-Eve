@@ -10,40 +10,37 @@
   </head>
   <body id="main-body">
     <div class="mood-main-container container-fluid">
+        <h2 class="text-center p-3 text-white">Mood</h2>
         <div class="mood-cont">
             <div class="box-a">
                 <div class="head">
-                    <h4>How would you describe your <span class="brand">Mood</span> Today.</h4>
+                    <p>How would you describe your <span class="brand">Mood</span> Today.</p>
                 </div>
                 <div class="bottom">
-                    <div class="mood-bx">
-                        <span class="icon">😊</span>
-                        <p>Calm</p>
+                    <div class="mood-bx" data-type="worried">
+                        <span class="icon" >😟</span>
+                        <p>Worried</p>
                     </div>
-                    <div class="mood-bx">
+                    <div class="mood-bx" data-type="angry">
                         <span class="icon">😡</span>
                         <p>Angry</p>
                     </div>
-                    <div class="mood-bx">
+                    <div class="mood-bx" data-type="tired">
                         <span class="icon">😫</span>
                         <p>Tired</p>
                     </div>
-                    <div class="mood-bx">
-                        <span class="icon">😐</span>
-                        <p>Neutral</p>
-                    </div>
-                    <div class="mood-bx">
+                    <div class="mood-bx" data-type="sad">
                         <span class="icon">😞</span>
                         <p>Sad</p>
                     </div>
                 </div>
-                <button class="btn-block btn">Calm Down</button>
+                <button class="btn getMood">Calm Down</button>
             </div>
             <div class="box-b">
                 <div class="head">
                     <p>Here are top youtube music which fit your emotion: <span class="brand">Angry</span></p>
                 </div>
-                <div class="body">
+                <div class="music-body">
                     <div class="music-card">
                         <div class="play-cont">
                             <a href="">
@@ -68,7 +65,7 @@
 
     <script src="./js/app.js"></script>
     <script>
-        JOKES_PAGE_INIT()
+        MOOD()
     </script>
   </body>
 </html>

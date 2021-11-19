@@ -36,16 +36,16 @@ app.get("/jokes/random", async (req, res) => {
 })
 
 
-app.get("/music/search/:keyword", (req, res) => {
-    let { keyword } = req.params;
+app.post("/music/search/", (req, res) => {
+    let { mood } = req.body;
 
     YT.initalize()
         .then(async (info) => {
-            let songs = await YT.search(keyword, "song")
+            let songs = await YT.search(mood, "song")
 
-            let songsData = {};
             let songsWorld = []
             songs.content.forEach(data => {
+                let songsData = {};
                 songsData["videoId"] = data.videoId,
                     songsData["name"] = data.name,
                     songsData["artist"] = data.artist.name,

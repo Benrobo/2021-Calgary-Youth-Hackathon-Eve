@@ -508,102 +508,238 @@ body {
 
 /* MEDITATION */
 
-.medi-main-container{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background: var(--bg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
+.medi-main-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: var(--bg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.medi-ovl{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    left:0px;
-    top:0px;
-    /* background:rgba(0, 0, 0, 0.5); */
-    display: flex;
+.medi-ovl {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  /* background:rgba(0, 0, 0, 0.5); */
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  
 }
 
-.medi-ovl .medi-box{
-    width: 300px;
-    height: 300px;
-    border: 5px solid var(--color);
-    border-radius: 50%;
-    box-shadow: 0px 0px 100px var(--color);
+.medi-ovl .medi-box {
+  width: 300px;
+  height: 300px;
+  border: 5px solid var(--color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 100px var(--color);
 }
 
-.medi-ovl .medi-box img{
-    transform: scale(.85);
+.medi-ovl .medi-box img {
+  transform: scale(0.85);
 }
 
-.medi-ovl .medi-box img{
-    transition: .2s ease;
-    animation: grow 3s linear infinite;
+.medi-ovl .medi-box img {
+  transition: 0.2s ease;
+  animation: grow 3s linear infinite;
 }
 
-.medi-ovl .instruction{
-    margin-top: 30px;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--color);
+.medi-ovl .instruction {
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color);
 }
 
-.medi-ovl .controls .start-meditation-btn{
-    margin-top: 30px;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 800;
-    background: #000;
-    color: var(--color);
-    border: 2px solid var(--color);
+.medi-ovl .controls .start-meditation-btn {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  background: #000;
+  color: var(--color);
+  border: 2px solid var(--color);
 }
 
 @keyframes grow {
-    0%{
-        transform: scale(1.1);
-        transition: .2s ease;
-    }
-    50%{
-        transform: scale(.95);
-        transition: .2s ease;
-    }
-    100%{
-        transform: scale(1.1);
-        transition: .2s ease;
-    }
+  0% {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+  }
+  50% {
+    transform: scale(0.95);
+    transition: 0.2s ease;
+  }
+  100% {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+  }
 }
-
-
-
 
 /* MOOD CONTAINER */
 
+.mood-main-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
 
+.mood-cont {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
 
+.mood-cont .box-a {
+  width: 45%;
+  position: relative;
+  left: 0px;
+  background: #010111;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+.mood-cont .box-a .head {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #ccc;
+}
+.mood-cont .box-a .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 100%;
+  margin: 0px auto;
+}
 
+.mood-cont .box-a .mood-bx {
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--bg);
+  color: #ccc;
+  border-radius: 10px;
+  transform: scale(0.85);
+  cursor: pointer;
+}
+.mood-cont .box-a .mood-bx:hover {
+  transform: scale(1);
+  transition: 0.2s ease;
+}
 
+.mood-cont .box-a .mood-bx .icon {
+  font-size: 30px;
+  pointer-events: none;
+}
 
+.mood-cont .box-a .btn {
+  margin: 10px auto;
+  background: #000;
+  color: var(--color);
+  border: 2px solid var(--color);
+  padding: 10px 25px;
+  border-radius: 30px;
+}
 
+.mood-cont .box-b {
+  width: 60%;
+  margin: 10px;
+  padding: 0px;
+  left: 0px;
+  border-radius: 10px;
+  position: relative;
+  background: #010111;
+  padding: 20px;
+}
 
+.mood-cont .box-b .head {
+  width: 100%;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+}
 
+.mood-cont .box-b .music-body {
+  width: 100%;
+  height: 400px;
+  max-height: 400px;
+  overflow-y: scroll;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content:center; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
 
+.mood-cont .box-b .music-body::-webkit-scrollbar {
+  width: 3px;
+  background: #777;
+}
 
+.mood-cont .box-b .music-body .music-card {
+  width: 180px;
+  height: 200px;
+  background: url("https://lh3.googleusercontent.com/vxJGG-2rl6aZ2tftWtfvE9qLWiG1ZlQ_QF19S60K-vq1YDBcrqTipd3ArXAE4sbtz4DioV5NCwbP9X8f=w120-h120-l90-rj");
+  border-radius: 10px;
+  background-size: cover;
+  background-position: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border: 2px solid var(--color);
+  overflow: hidden;
+  margin: 10px auto;
+}
 
+.mood-cont .box-b .music-body .music-card .play-cont {
+  width: 100%;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
 
+.mood-cont .box-b .music-body .music-card .play-cont ion-icon {
+  padding: 10px;
+  background: var(--bg);
+  border-radius: 50%;
+}
 
-
-
+.mood-active {
+  border: 2px solid var(--color);
+  transform: scale(1.2);
+  opacity: 1;
+}

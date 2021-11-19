@@ -146,3 +146,64 @@ const MEDITATION = () => {
 
 
 
+// MOOD CALMER
+const MOOD = () => {
+    let moodBoxes = $all(".mood-bx");
+    let getMoodMedia = $(".getMood");
+    let musicBody = $(".music-body");
+    let moodType = ""
+    let loading = false;
+
+    for (let i = 0; i < moodBoxes.length; i++) {
+        moodBoxes[i].onclick = (e) => {
+            let className = "mood-active"
+            if (e.target.classList.contains(className)) {
+                e.target.classList.remove(className)
+                return
+            }
+            e.target.classList.add(className)
+
+            moodType = e.target.getAttribute("data-type");
+
+        }
+    }
+
+    getMoodMedia.onclick = async () => {
+        if (moodType === "") {
+            alert("please select your emotion")
+            return;
+        }
+        loading = true;
+        musicBody.innerHTML = `
+        <p>Getting media based on your mood, this may take some time.</p>
+         `
+        let req = await fetch(`http://localhost:3000/music/search/`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({ mood: moodType })
+        });
+
+        let { songs } = await req.json();
+        // console.log(songs)
+        loading = false;
+        musicBody.innerHTML = ""
+
+        for (let i = 0; i < songs.length; i++) {
+            let url = `https://www.youtube.com/watch?v=${songs[i].videoId}`;
+
+            musicBody.innerHTML += `
+            <div class="music-card" style="background:url('${songs[i].thumbnails}'); background-size:cover; background-repeat:no-repeat; background-position:center;">
+            <div class="play-cont">
+                <a href="${url}" target="_blank">
+                    <ion-icon name="play"></ion-icon>
+                </a>
+                <span class="title">${songs[i].name}</span>
+            </div>
+        </div>
+            `
+        }
+
+    }
+}
